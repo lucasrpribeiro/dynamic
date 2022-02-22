@@ -1,0 +1,47 @@
+body, main, section {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: aquamarine;
+  width: 100%;
+}
+
+.container {
+  margin: 20px 0;
+  width: 50%;
+  background-color: aliceblue;
+  border-radius: 15px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.199);
+}
+
+header {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-size: xx-large;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+section {
+  background-color: aliceblue;
+  padding: 50px 0;
+  border-radius: 15px;
+}
+
+.img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+footer {
+  border-radius: 15px 15px 0 0;
+  background-color: aliceblue;
+  padding: 20px;
+  font-weight: bold;
+}
