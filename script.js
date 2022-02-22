@@ -1,6 +1,6 @@
 function load() {
-  let msg = document.querySelector('#msg')
-  let img = document.querySelector('#img')
+  let msg = document.querySelector('.msg')
+  let img = document.querySelector('.img')
   let date = new Date()
   let hours = date.getHours()
   let period = document.querySelector('#periodMsg')
