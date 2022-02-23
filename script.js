@@ -1,30 +1,29 @@
-function load() {
-  let msg = document.querySelector('.msg')
-  let img = document.querySelector('.img')
+function load () {
+  let message = document.querySelector('.msg')
+  let image = document.querySelector('.img')
+  let currentMessage = document.querySelector('#periodMsg')
   let date = new Date()
-  let hours = date.getHours()
-  let period = document.querySelector('#periodMsg')
-  let periodMsg = ''
-  
-  if (hours >7 && hours <= 12) {
-    document.body.style.background = "#0284c7"
-    img.src = 'assets/dia.png'
-    periodMsg = 'Bom dia!'
-  } else if (hours > 12 && hours <= 18) {
-    document.body.style.background = '#d97706'
-    img.src = 'assets/tarde.png'
-    periodMsg = 'Boa tarde!'
-  } else if (hours > 18 && hours <= 0){
-    document.body.style.background = '#111827'
-    img.src = 'assets/noite.png'
-    periodMsg = 'Boa noite!'
-  } else {
-    document.body.style.background = 'red'
-    periodMsg = 'Você não deveria estar dormindo?'
-    img.src = 'assets/madruga.png'
-  }
+  let hour = date.getHours()
 
-  msg.innerHTML = `Agora são ${hours} horas`
-  period.innerHTML = periodMsg
-  
-}
+  if (hour >= 7 && hour < 12) {
+    document.body.style.background = '#0284c7'
+    currentMessage.innerHTML = 'Tenha um bom dia!'
+    message.innerHTML = `Agora são ${hour} horas`
+    image.src = 'assets/dia.png'
+  } else if (hour >= 12 && hour < 18) {
+    document.body.style.background = '#d97706'
+    message.innerHTML = `Agora são ${hour} horas`
+    currentMessage.innerHTML = 'Tenha uma boa tarde!'
+    image.src = 'assets/tarde.png'
+  } else if (hour >= 18 && hour <= 23) {
+    document.body.style.background = '#111827'
+    message.innerHTML = `Agora são ${hour} horas`
+    currentMessage.innerHTML = 'Tenha uma boa noite!'
+    image.src = 'assets/noite.png'
+  } else {
+    document.body.style.background = 'black'
+    message.innerHTML = `Já são ${hour} horas`
+    currentMessage.innerHTML = 'Vai dormir viado!'
+    image.src = 'assets/madruga.png'
+  }
+} 
